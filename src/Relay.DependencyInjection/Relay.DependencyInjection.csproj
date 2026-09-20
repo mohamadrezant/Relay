@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<Nullable>disable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<TargetFramework>net10.0</TargetFramework>
+	</PropertyGroup>
+
+	<ItemGroup>
+
+		<ProjectReference Include="..\Relay.Mapper.Adapters.InMemory\Relay.Mapper.Adapters.InMemory.csproj" />
+		<ProjectReference Include="..\Relay.Dispatcher.Adapters.InMemory\Relay.Dispatcher.Adapters.InMemory.csproj" />
+		<ProjectReference Include="..\Relay.Validation.Adapters.InMemory\Relay.Validation.Adapters.InMemory.csproj" />
+		
+		<ProjectReference Include="..\Relay.FeatureBuilder.Abstractions\Relay.FeatureBuilder.Abstractions.csproj" />
+	</ItemGroup>
+
+</Project>

@@ -1,0 +1,21 @@
+<Solution>
+	<Folder Name="/src/">
+		<Project Path="src/Relay.DependencyInjection/Relay.DependencyInjection.csproj" Id="975c3a34-08bb-42ef-b9eb-228499369015" />
+		<Project Path="src/Relay.FeatureBuilder.Abstractions/Relay.FeatureBuilder.Abstractions.csproj" Id="e2215baa-386e-44d9-b47b-77cf0409d79f" />
+	</Folder>
+
+	<Folder Name="/src/Dispatcher/">
+		<Project Path="src/Relay.Dispatcher.Adapters.InMemory/Relay.Dispatcher.Adapters.InMemory.csproj" Id="4d310944-7067-4560-aa4b-af8c9334b462" />
+		<Project Path="src/Relay.Dispatcher/Relay.Dispatcher.csproj" Id="d2a8c3c3-fbe5-41fb-8cc4-997c0a7b38f1" />
+	</Folder>
+
+	<Folder Name="/src/Mapper/">
+		<Project Path="src/Relay.Mapper.Adapters.InMemory/Relay.Mapper.Adapters.InMemory.csproj" Id="8aaeab28-e38f-450e-89b0-f66e1ae431a8" />
+		<Project Path="src/Relay.Mapper/Relay.Mapper.csproj" Id="0d797391-1cb5-45bc-ba6d-727cc9da41a0" />
+	</Folder>
+
+	<Folder Name="/src/Validation/">
+		<Project Path="src/Relay.Validation.Adapters.InMemory/Relay.Validation.Adapters.InMemory.csproj" Id="f5174a8a-69f9-4b4f-b713-fe778fdea808" />
+		<Project Path="src/Relay.Validation/Relay.Validation.csproj" Id="4275bec9-6151-4a24-9ff4-b54d4c5ca8f5" />
+	</Folder>
+</Solution>
