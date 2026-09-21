@@ -26,13 +26,36 @@ public class DispatcherRelayFeatureBuilder(RelayFeatureBuilder overrides)
 
     /// <summary>
     /// Registers the specified pipeline behavior implementation with the configured service lifetime.
+    /// Determines whether the implementation handles requests with or without a response and registers
+    /// it against the corresponding open generic pipeline behavior interface.
     /// </summary>
     /// <param name="pipelineType">The pipeline behavior implementation type.</param>
     /// <param name="lifetime">The service lifetime used to register the pipeline behavior.</param>
     /// <returns>The current Dispatcher feature builder.</returns>
+    /// <exception cref="ArgumentException">
+    /// Thrown when <paramref name="pipelineType"/> does not implement
+    /// <see cref="IPipelineBehavior{TRequest}"/> or
+    /// <see cref="IPipelineBehavior{TRequest, TResponse}"/>.
+    /// </exception>
     public DispatcherRelayFeatureBuilder UsePipeline(Type pipelineType, ServiceLifetime lifetime)
     {
-        Services.Add(new(typeof(IPipelineBehavior<>), pipelineType, lifetime));
+        var pipelineInterfaces = pipelineType
+            .GetInterfaces()
+            .Where(@interface => @interface.IsGenericType)
+            .Select(@interface => @interface.GetGenericTypeDefinition());
+
+        if (pipelineInterfaces.Contains(typeof(IPipelineBehavior<>)))
+        {
+            Services.Add(new(typeof(IPipelineBehavior<>), pipelineType, lifetime));
+        }
+        else if (pipelineInterfaces.Contains(typeof(IPipelineBehavior<,>)))
+        {
+            Services.Add(new(typeof(IPipelineBehavior<,>), pipelineType, lifetime));
+        }
+        else
+        {
+            throw new ArgumentException($"Type '{pipelineType.FullName}' must implement '{nameof(IPipelineBehavior<>)}<>' or '{nameof(IPipelineBehavior<,>)}<,>'.", nameof(pipelineType));
+        }
 
         return this;
     }
