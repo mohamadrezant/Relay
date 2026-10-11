@@ -1,0 +1,14 @@
+<Project>
+  <PropertyGroup>
+    <Authors>mohamadrezant</Authors>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/mohamadrezant/Relay</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/mohamadrezant/Relay</PackageProjectUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <Copyright>Copyright © 2026 mohamadrezant</Copyright>
+    <PackageId>$(MSBuildProjectName)</PackageId>
+    <Version Condition="'$(Version)' == ''">1.0.0</Version>
+    <Description>A modular .NET library providing reusable application infrastructure.</Description>
+  </PropertyGroup>
+</Project>
