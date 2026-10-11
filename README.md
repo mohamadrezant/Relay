@@ -232,6 +232,30 @@ All current projects target:
 
 # Getting Started
 
+## Installation
+
+For most applications, install the main `Relay.DependencyInjection` package. It provides the `AddRelay(...)` entry point and automatically brings in the default in-memory implementations of Dispatcher, Mapper, and Validation through transitive dependencies.
+
+```bash
+dotnet add package Relay.DependencyInjection
+```
+
+You do not need to install the other Relay packages separately when using the main package.
+
+If you prefer to use individual Relay components without the main dependency injection package, install only the packages you need:
+
+| Package                              | Purpose                                        |
+| ------------------------------------ | ---------------------------------------------- |
+| `Relay.Dispatcher`                   | Dispatcher abstractions and core functionality |
+| `Relay.Dispatcher.Adapters.InMemory` | In-memory Dispatcher implementation            |
+| `Relay.Mapper`                       | Mapper abstractions and core functionality     |
+| `Relay.Mapper.Adapters.InMemory`     | In-memory Mapper implementation                |
+| `Relay.Validation`                   | Validation abstractions and core functionality |
+| `Relay.Validation.Adapters.InMemory` | In-memory Validation implementation            |
+| `Relay.FeatureBuilder.Abstractions`  | Shared feature-builder abstractions            |
+
+## Usage
+
 Relay integrates with `IServiceCollection`.
 
 The root entry point is:
