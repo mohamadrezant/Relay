@@ -7,7 +7,7 @@ namespace Relay.Mapper;
 /// Provides configuration methods for registering Relay Mapper implementations
 /// and their corresponding service lifetimes.
 /// </summary>
-public class MapperRelayFeatureBuilder(RelayFeatureBuilder overrides)
+public sealed class MapperRelayFeatureBuilder(RelayFeatureBuilder overrides)
     : RelayFeatureBuilder(overrides)
 {
     /// <summary>

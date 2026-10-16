@@ -6,4 +6,4 @@ namespace Relay.Mapper.Contracts;
 /// Contains runtime metadata for a mapping profile, including its source type,
 /// destination type, and mapping expression.
 /// </summary>
-public record MappingProfileInfo(Type Source, Type Destination, Expression Expression);
+public sealed record MappingProfileInfo(Type Source, Type Destination, Expression Expression);

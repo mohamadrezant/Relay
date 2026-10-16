@@ -1,6 +1,4 @@
-﻿using System.Linq.Expressions;
-
-namespace Relay.Mapper.Adapters.InMemory;
+﻿namespace Relay.Mapper.Adapters.InMemory;
 
 /// <summary>
 /// Provides an in-memory adapter for resolving mapping profiles dynamically

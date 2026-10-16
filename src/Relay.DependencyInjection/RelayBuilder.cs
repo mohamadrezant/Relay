@@ -20,7 +20,7 @@ namespace Relay.DependencyInjection;
 /// Feature-specific configuration can be continued through specialized
 /// builders, such as Dispatcher, Mapper, and Validation feature builders.
 /// </remarks>
-public class RelayBuilder(IServiceCollection services, string[] assemblyNameFragments)
+public sealed class RelayBuilder(IServiceCollection services, string[] assemblyNameFragments)
     : RelayFeatureBuilder(services, assemblyNameFragments)
 {
 }

@@ -7,7 +7,7 @@ namespace Relay.Dispatcher;
 /// Provides fluent configuration for the Relay Dispatcher feature, including dispatcher,
 /// pipeline behavior, and Outbox store registrations.
 /// </summary>
-public class DispatcherRelayFeatureBuilder(RelayFeatureBuilder overrides)
+public sealed class DispatcherRelayFeatureBuilder(RelayFeatureBuilder overrides)
     : RelayFeatureBuilder(overrides)
 {
     /// <summary>

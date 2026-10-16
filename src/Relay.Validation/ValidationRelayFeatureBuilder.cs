@@ -16,7 +16,7 @@ namespace Relay.Validation;
 /// the shared dependency injection services and assembly discovery settings
 /// established by the parent <see cref="RelayFeatureBuilder"/>.
 /// </remarks>
-public class ValidationRelayFeatureBuilder(RelayFeatureBuilder featureBuilder)
+public sealed class ValidationRelayFeatureBuilder(RelayFeatureBuilder featureBuilder)
     : RelayFeatureBuilder(featureBuilder)
 {
     /// <summary>
