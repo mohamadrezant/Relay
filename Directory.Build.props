@@ -4,11 +4,28 @@
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/mohamadrezant/Relay</RepositoryUrl>
     <PackageProjectUrl>https://github.com/mohamadrezant/Relay</PackageProjectUrl>
+
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-    <Copyright>Copyright © 2026 mohamadrezant</Copyright>
+
     <PackageId>$(MSBuildProjectName)</PackageId>
     <Version Condition="'$(Version)' == ''">1.0.0</Version>
-    <Description>A modular .NET library providing reusable application infrastructure.</Description>
+    <Description>A modular .NET library providing Dispatcher, Mapper, and Validation features.</Description>
+
+    <PackageIcon>icon.png</PackageIcon>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+
+    <Copyright>Copyright © 2026 mohamadrezant</Copyright>
+    <IsPackable>true</IsPackable>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)images\icon.png"
+      Pack="true"
+      PackagePath="icon.png" />
+
+    <None Include="$(MSBuildThisFileDirectory)\README.md"
+      Pack="true"
+      PackagePath="\" />
+  </ItemGroup>
 </Project>

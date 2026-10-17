@@ -4,17 +4,8 @@
 		<Nullable>disable</Nullable>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<TargetFramework>net10.0</TargetFramework>
-
 		<PackageId>Relay.DependencyInjection</PackageId>
-		<Version>1.0.0</Version>
-		<Description>A modular .NET library providing Dispatcher, Mapper, and Validation features.</Description>
 		<PackageTags>dispatcher;mediator;mapper;validation;dependency-injection</PackageTags>
-		<PackageReadmeFile>README.md</PackageReadmeFile>
-
-		<PackageLicenseExpression>MIT</PackageLicenseExpression>
-
-		<PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-		<IsPackable>true</IsPackable>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -23,12 +14,6 @@
 		<ProjectReference Include="..\Relay.Validation.Adapters.InMemory\Relay.Validation.Adapters.InMemory.csproj" />
 
 		<ProjectReference Include="..\Relay.FeatureBuilder.Abstractions\Relay.FeatureBuilder.Abstractions.csproj" />
-	</ItemGroup>
-
-	<ItemGroup>
-		<None Include="..\..\README.md"
-			  Pack="true"
-			  PackagePath="\" />
 	</ItemGroup>
 
 </Project>
